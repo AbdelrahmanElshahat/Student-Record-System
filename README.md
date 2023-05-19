@@ -1,7 +1,7 @@
 # Student Record System is a simple program that can be used to store the student information in a linked list. The program is written in C language. 
 # The program is menu driven and it has following options:
-# Administrator Menu 
-# Student Menu
+1. Administrator Menu 
+2. Student Menu
 # The administrator menu has following options:
  1. Add a new student record
  2. Delete a student record
