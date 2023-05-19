@@ -13,5 +13,5 @@
  2. Change your password.
 
 
-# *********** The Admin password is 1234 can be modified in Privilage.h file ***********
-# *********** The Students id must be incremented by 1 and first student id must be 0 ***********
+  The Admin password is 1234 can be modified in Privilage.h file 
+ The Students id must be incremented by 1 and first student id must be 0 
