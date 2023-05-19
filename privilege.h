@@ -56,6 +56,7 @@ int modify_degree(int ID,int degree);
  */
 
 int traverse_record(int ID);
+int traverse_list();
 /*
  *  description: view info about record.
  *  return: 1 if traversing the record succeeded, 0 if not.

@@ -164,9 +164,9 @@ void admin_action()
             }
             break;
         case 6 :
-        if (!traverse_record(ID))
+            if (!traverse_list())
             {
-                printf("No Records yet\n");
+                printf("There is no students\n");
             }
             break;
 
