@@ -29,6 +29,15 @@ void TraverseList(List *pl,void (*visit)(Listentery)){
         p=p->next;
     }
 }
+void TraverseRecord(List *pl,int pos,void (*visit)(Listentery)){
+    Listnode *p=pl->head;
+    int i;
+    for (i=0;i<pos;i++){
+        p=p->next;
+    }
+    (*visit)(p->entery);
+}
+
 void Insert(int pos , Listentery e,List *pl){
     Listnode *p,*q;
     int i;

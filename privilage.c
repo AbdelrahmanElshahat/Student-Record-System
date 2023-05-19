@@ -5,7 +5,6 @@
 #include "privilege.h"
 static Listentery Student;
 static List student;
-
 void init_privilege(){
     CreateList(&student);
 }
@@ -16,9 +15,6 @@ int check_user_ID_password(int ID, char *password) {
 
         } else
             return 0;
-
-
-
 }
 int check_admin_password(int adminPassword) {
     if (adminPassword == ADMINPASSWORD){
@@ -75,13 +71,21 @@ int traverse_record(int ID){
     RetrieveList(ID,&Student,&student);
 
         if (Student.id == ID){
+            TraverseRecord(&student,ID,display);
+            return 1;
+
+        }else
+            return 0;
+}
+int traverse_list(int ID){
+    RetrieveList(ID,&Student,&student);
+
+        if (Student.id == ID){
             TraverseList(&student,display);
             return 1;
 
         }else
             return 0;
-
-
 }
 
 void display(Listentery student){

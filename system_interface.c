@@ -17,7 +17,6 @@ void system_run()
     printf("Select the mode:\n");
     printf("1-Admin Mode.\n");
     printf("2-User Mode.\n");
-
     scanf("%d",&systemMode);
     while (systemMode != ADMIN_MODE && systemMode != USER_MODE)
     {
@@ -67,8 +66,9 @@ void admin_menu()
     printf("3-Edit student password.\n");
     printf("4-Edit student degree.\n");
     printf("5-View student info.\n");
-    printf("6-Remove student.\n");
-    printf("7-Return to main menu\n");
+    printf("6-View All student info.\n");
+    printf("7-Remove student.\n");
+    printf("8-Return to main menu\n");
 }
 
 void admin_action()
@@ -93,11 +93,9 @@ void admin_action()
 
         case 1:
             printf("Enter student name:\n");
-            fflush(stdin);
-            gets(studentName);
+            scanf("%s",studentName);
             printf("Enter student password:\n");
-            fflush(stdin);
-            gets(studentPassword);
+           scanf("%s",studentPassword);
             printf("Enter Student ID:\n");
             scanf("%d", &ID);
             printf("Enter student degree:\n");
@@ -114,8 +112,7 @@ void admin_action()
 
         case 2:
             printf("Enter student name:\n");
-            fflush(stdin);
-            gets(studentName);
+           scanf("%s",studentName);
             printf("Enter student ID:\n");
             scanf("%d",&ID);
             if (modify_student_name(ID, studentName))
@@ -129,11 +126,10 @@ void admin_action()
             break;
 
         case 3:
-            printf("Enter student password:\n");
-            fflush(stdin);
-            gets(studentPassword);
             printf("Enter student ID:\n");
             scanf("%d",&ID);
+            printf("Enter student new password:\n");
+            scanf("%s",studentPassword);
             if (modify_student_password(ID, studentPassword))
             {
                 printf("Password has been changed successfully!\n");
@@ -167,8 +163,14 @@ void admin_action()
                 printf("You entered invalid ID\n");
             }
             break;
+        case 6 :
+        if (!traverse_record(ID))
+            {
+                printf("No Records yet\n");
+            }
+            break;
 
-        case 6:
+        case 7:
             printf("Enter student ID:\n");
             scanf("%d",&ID);
             if (remove_record(ID))
@@ -181,7 +183,7 @@ void admin_action()
             }
             break;
 
-        case 7:
+        case 8:
             system_run();
             break;
     }
@@ -199,8 +201,7 @@ void user_mode()
     printf("Enter your ID:\n");
     scanf("%d",&ID);
     printf("Enter your password:\n");
-    fflush(stdin);
-    gets(passwordBuf);
+    scanf("%s",passwordBuf);
     user_login(&ID,passwordBuf);
     user_menu();
     user_action(ID);
@@ -214,8 +215,7 @@ void user_login(int *ID,char *userPassword)
         printf("Enter your ID:\n");
         scanf("%d",ID);
         printf("Enter your password:\n");
-        fflush(stdin);
-        gets(userPassword);
+       scanf("%s",userPassword);
     }
 }
 
@@ -246,8 +246,7 @@ void user_action(int ID)
 
         case 2:
             printf("Enter your new password:\n");
-            fflush(stdin);
-            gets(studentPassword);
+            scanf("%s",studentPassword);
             modify_student_password(ID, studentPassword);
             break;
 

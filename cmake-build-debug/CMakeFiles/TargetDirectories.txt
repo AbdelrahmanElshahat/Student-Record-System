@@ -1,3 +1,0 @@
-C:/Users/abdel/OneDrive/Desktop/DataStructure/LinkedList1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/abdel/OneDrive/Desktop/DataStructure/LinkedList1/cmake-build-debug/CMakeFiles/linkedlist.dir
-C:/Users/abdel/OneDrive/Desktop/DataStructure/LinkedList1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

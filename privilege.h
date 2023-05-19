@@ -9,9 +9,9 @@
 #define ADMINPASSWORD 1234
 #define MAX_LENGTH 50
 
+
 void init_privilege();
 int check_user_ID_password(int ID, char *password);
-
 
 void set_admin_password();
 /*

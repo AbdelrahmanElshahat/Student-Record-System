@@ -25,4 +25,5 @@ void Delete(int ,Listentery *,List *);
 void TraverseList(List *,void (*visit)(Listentery));
 student_t RetrieveList(int ,Listentery*,List*);
 void Replace(int ,Listentery,List *);
+void TraverseRecord(List *pl,int pos,void (*visit)(Listentery));
 #endif //LINKEDLIST_LINKEDLIST_H
